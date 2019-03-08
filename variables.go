@@ -8,6 +8,8 @@ import (
 // Declaring variables like this makes them get
 // initialised with a zero initial value
 // 0 for a float64 and an empty string for a string type
+// These are global variables and will be available to all functions in
+// this package
 var (
 	name, course string
 	module       float64
