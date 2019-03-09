@@ -20,6 +20,7 @@ func main() {
 	fmt.Println("New values for the map: ", testMap)
 
 	// Deleting an element from the map. Use the in built delete method
+	// Format of delete is always delete(<map>, <key>)
 	delete(testMap, "C")
 	fmt.Println("Currently existing look of map: ", testMap)
 
