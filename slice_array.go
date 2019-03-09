@@ -18,6 +18,8 @@ func main() {
 	*/
 	myCourses := make([]int, 5, 10)
 	fmt.Println("myCourses has a length of ", len(myCourses), " and capacity of ", cap(myCourses))
+	// here course will represent a value in the slice and _ a place holder for
+	// the index of the slice
 	for _, course := range myCourses {
 		fmt.Println(course)
 	}
@@ -53,6 +55,9 @@ func main() {
 	*/
 	sliceOfSlice := mySlice[1:5]
 	fmt.Println("This is the first value of a slice of a slice: ", sliceOfSlice[0])
+
+	// This will reference the whole slice when compared to other languages such as
+	// c which will reference the first value only.
 	fmt.Println("These are the values in the slice", sliceOfSlice)
 
 	// Print this string in reverse order
