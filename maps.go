@@ -14,6 +14,8 @@ func main() {
 			  the equal to(==) or (!= )
 			  2. All keys in a map have to be unique. You cannot have two items with The
 			  same key
+				3. For performance try to specify the size of a map at creation time
+					ie. make(map[<keyType>]<valueType>, size)
 	*/
 
 	leagueTitles := make(map[string]int)
