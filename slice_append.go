@@ -16,4 +16,10 @@ func main() {
 			len(mySlice), cap(mySlice))
 	}
 
+	// Appending a slice to  Slice
+	newSlice := []int{1, 3, 5, 7, 9}
+	// use an elipsis(...) to extract the elements of the new slice
+	mySlice = append(mySlice, newSlice...)
+	fmt.Println("\n", mySlice)
+
 }
