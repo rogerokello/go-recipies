@@ -5,7 +5,13 @@ import "fmt"
 func main() {
 
 	message := "Hello world"
-	a, b, c := 1, true, 3
+	var messagePtr = &message
 
-	fmt.Println(message, a, b, c)
+	/*
+	  - message is the message
+	  - messagePtr is a pointer to the message
+	  - *messagePtr is a way of dereferencing the message to get back the actual
+	    message
+	*/
+	fmt.Println(message, messagePtr, *messagePtr)
 }
