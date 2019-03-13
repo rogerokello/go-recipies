@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 //Salutation  This is a definition of type string to be a Salutation
+// Capitalizing the S in salutation means that salutation will
+// be visible outside this package
 type Salutation struct {
 	name     string
 	greeting string
