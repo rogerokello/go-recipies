@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	var message string
-	var a, b, c int
+	var a, b, c int = 1, 2, 3
 
 	message = "Hello World"
 
