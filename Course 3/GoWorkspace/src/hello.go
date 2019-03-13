@@ -2,13 +2,12 @@ package main
 
 import "fmt"
 
+//Salutation  This is a definition of type string to be a Salutation
+type Salutation string
+
 func main() {
 
-	message := "Hello world"
-	var messagePtr = &message
+	var message Salutation = "Hello world"
 
-	// This will modify what is being pointed to
-	*messagePtr = "New Hello Message"
-
-	fmt.Println(message, *messagePtr)
+	fmt.Println(message)
 }
