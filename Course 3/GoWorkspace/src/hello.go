@@ -11,8 +11,8 @@ type Salutation struct {
 func main() {
 
 	var s = Salutation{
-		"Roger",
-		"Hello ",
+		greeting: "Hello ",
+		name:     "Roger ",
 	}
 
 	fmt.Println(s.name)
