@@ -3,9 +3,10 @@ package main
 import "fmt"
 
 const (
+	// A incrementing iota's
 	A = iota
-	B = iota
-	C = iota
+	B
+	C
 )
 
 func main() {
