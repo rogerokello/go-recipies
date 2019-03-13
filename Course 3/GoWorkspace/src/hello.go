@@ -12,5 +12,8 @@ func main() {
 
 	var s = Salutation{}
 
-	fmt.Println(s.name)
+	s.name = "Roger"
+	s.greeting = "Hello"
+
+	fmt.Println(s.greeting, " ", s.name)
 }
