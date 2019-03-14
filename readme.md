@@ -12,3 +12,8 @@ Some useful information when dealing with Go
             |------ hello
 3. Generally the `GOPATH` must be set to point to the GoWorkspace directory for the command `go install rogerokello.com/hello` to become successful at creating a bin directory and placing the final executable there
 4. Resource on how to setup a golang development environment on a mac `https://medium.com/@AkyunaAkish/setting-up-a-golang-development-environment-mac-os-x-d58e5a7ea24f`
+5. Functions:
+  - They are actually types in go and can return multiple values
+  - They can be used like any other types and can be passed around just like they are in other languages like javascript
+  - They are literals and can remember the context of where they are defined (closures)
+  
