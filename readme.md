@@ -17,4 +17,5 @@ Some useful information when dealing with Go
   - They can be used like any other types and can be passed around just like they are in other languages like javascript
   - They are literals and can remember the context of where they are defined (closures)
   - They do not specify void incase they do not return a value
-  
+6. Variables:
+  - In go, you cannot declare a Variables and not use them
