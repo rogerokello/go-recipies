@@ -8,8 +8,11 @@ type Salutation struct {
 	greeting string
 }
 
+// Printer is a type which a function that takes in a string and returns nothing
+type Printer func(string) // or type Printer func(string)()
+
 // Greet takes in a function as a parameter
-func Greet(salutation Salutation, do func(string)) {
+func Greet(salutation Salutation, do Printer) {
 	message, alternate := CreateMessage(salutation.name, salutation.greeting)
 	do(message)
 	do(alternate)
