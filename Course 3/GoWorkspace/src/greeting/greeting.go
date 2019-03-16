@@ -52,3 +52,16 @@ func MakePrinter(custom string) Printer {
 		fmt.Println(a + custom)
 	}
 }
+
+func TypeSwitchTest(x interface{}) {
+	switch x.(type) {
+	case int:
+		fmt.Println("int")
+	case string:
+		fmt.Println("string")
+	case Salutation:
+		fmt.Println("salutation")
+	default:
+		fmt.Println("unknown")
+	}
+}
