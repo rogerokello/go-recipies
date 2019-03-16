@@ -14,12 +14,14 @@ type Printer func(string) // or type Printer func(string)()
 // Greet takes in a function as a parameter
 func Greet(salutation Salutation, do Printer, isFormal bool, times int) {
 	message, alternate := CreateMessage(salutation.Name, salutation.Greeting)
-	for i := 0; i < times; i++ {
+	i := 0
+	for i < times {
 		if prefix := GetPrefix(salutation.Name); isFormal {
 			do(prefix + message)
 		} else {
 			do(alternate)
 		}
+		i++
 	}
 }
 
