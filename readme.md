@@ -65,7 +65,7 @@ Some useful information when dealing with Go
     }
     ```
     3. With the range construct
-    NB: A collection may be a map or a slice or an array
+    NB: A collection may be a map, slice or array, string, channel
     ```
     for i := range collection {
       block
@@ -77,5 +77,6 @@ Some useful information when dealing with Go
     for {
       block
       break // to break out of the for loop
+      continue // to stop execution at that point and continue the next iteration
     }
     ```
