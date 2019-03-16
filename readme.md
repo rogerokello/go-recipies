@@ -46,3 +46,36 @@ Some useful information when dealing with Go
     where the cases are constants or strings that have been evaluatated at the
     beginning of the switch block.
   - It is possible to switch on types.
+
+8. Looping (`The For statement`)
+  - There is only one keyword for looping. However it can be manipulated in countless
+    ways to suite the same style in other programming languages.
+  - These are the several ways it could look
+    1. Only specifying a condition
+    NB: The condition must evaluate to true or false
+    ```
+    for condition {
+      block
+    }
+    ```
+    2. The For clause
+    ```
+    for initialiser; condition; post {
+      block
+    }
+    ```
+    3. With the range construct
+    NB: A collection may be a map or a slice or an array
+    ```
+    for i := range collection {
+      block
+    }
+    ```
+    4. For without a while loop. Internally mimicking an infinite loop where
+       one may have to break out using a break statement
+    ```
+    for {
+      block
+      break // to break out of the for loop
+    }
+    ```
