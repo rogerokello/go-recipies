@@ -35,3 +35,14 @@ Some useful information when dealing with Go
     block
   }
   ```
+
+  `Switch  statement`
+  - There is no default fall through. So you do not have to put break statements
+    like there are in other programming languages switch statements.
+  - There is a keyword `fallthrough` that will make a case statement fall through
+    to the next block.
+  - It behaves like a set of if-else statements unless specified to behave otherwise
+  - The cases can actually be expressions unlike in other programming languages
+    where the cases are constants or strings that have been evaluatated at the
+    beginning of the switch block.
+  - It is possible to switch on types.
