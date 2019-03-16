@@ -17,8 +17,13 @@ Some useful information when dealing with Go
   - They can be used like any other types and can be passed around just like they are in other languages like javascript
   - They are literals and can remember the context of where they are defined (closures)
   - They do not specify void incase they do not return a value
+  - References
+    1. Function usage Advanced: http://golang.org/doc/codewalk/functions/
+    2. Function types: http://golang.org/ref/spec#Function_types
 6. Variables:
   - In go, you cannot declare a Variables and not use them
+  - References
+    1. Function types: http://golang.org/ref/spec
 7. Branching
   `If statement general structure(Optional else block)`
   - There are no angle brackets between the optional statement and the condition
@@ -66,6 +71,9 @@ Some useful information when dealing with Go
     ```
     3. With the range construct
     NB: A collection may be a map, slice or array, string, channel
+    - References
+      - http://golang.org/ref/spec#For_statements
+      - http://golang.org/doc/effective_go.html#for
     ```
     for i := range collection {
       block
