@@ -19,3 +19,12 @@ Some useful information when dealing with Go
   - They do not specify void incase they do not return a value
 6. Variables:
   - In go, you cannot declare a Variables and not use them
+7. Branching
+  `If statement general structure`
+  - There are no angle brackets between the optional statement and the condition
+  - The curly brackets are mandatory
+  ```
+  if (optional statement); condition {
+    block
+  }
+  ```
