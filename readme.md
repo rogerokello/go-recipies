@@ -20,11 +20,18 @@ Some useful information when dealing with Go
 6. Variables:
   - In go, you cannot declare a Variables and not use them
 7. Branching
-  `If statement general structure`
+  `If statement general structure(Optional else block)`
   - There are no angle brackets between the optional statement and the condition
   - The curly brackets are mandatory
   ```
   if (optional statement); condition {
+    block
+  }
+  ```
+  ```
+  if (optional statement); condition {
+    block
+  }else{
     block
   }
   ```
