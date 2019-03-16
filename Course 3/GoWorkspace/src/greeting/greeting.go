@@ -12,12 +12,14 @@ type Salutation struct {
 type Printer func(string) // or type Printer func(string)()
 
 // Greet takes in a function as a parameter
-func Greet(salutation Salutation, do Printer, isFormal bool) {
+func Greet(salutation Salutation, do Printer, isFormal bool, times int) {
 	message, alternate := CreateMessage(salutation.Name, salutation.Greeting)
-	if prefix := GetPrefix(salutation.Name); isFormal {
-		do(prefix + message)
-	} else {
-		do(alternate)
+	for i := 0; i < times; i++ {
+		if prefix := GetPrefix(salutation.Name); isFormal {
+			do(prefix + message)
+		} else {
+			do(alternate)
+		}
 	}
 }
 
