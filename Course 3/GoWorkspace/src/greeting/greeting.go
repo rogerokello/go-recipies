@@ -25,7 +25,8 @@ func GetPrefix(name string) (prefix string) {
 	switch name {
 	case "Roger":
 		prefix = "Mr. "
-	case "Joe":
+		fallthrough // Will make the code fall through to next line without breaking
+	case "Joe", "Jenny": // This means that this case will consider either Joe or Jenny
 		prefix = "Dr. "
 	case "Mary":
 		prefix = "Mrs. "
