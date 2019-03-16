@@ -14,8 +14,8 @@ type Printer func(string) // or type Printer func(string)()
 // Greet takes in a function as a parameter
 func Greet(salutation Salutation, do Printer, isFormal bool) {
 	message, alternate := CreateMessage(salutation.Name, salutation.Greeting)
-	if isFormal {
-		do(message)
+	if prefix := "Mr "; isFormal {
+		do(prefix + message)
 	}
 	do(alternate)
 }
