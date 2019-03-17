@@ -101,3 +101,8 @@ Some useful information when dealing with Go
     actual reference is passed in an not a copy.
   - Maps are not thread safe. Do not use maps in concurrent code unless you
     absolutely have to.
+  `Map operations`
+  1. Insert
+  2. Update
+  3. Delete
+  4. Check for Existence
