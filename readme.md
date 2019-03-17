@@ -51,7 +51,6 @@ Some useful information when dealing with Go
     where the cases are constants or strings that have been evaluatated at the
     beginning of the switch block.
   - It is possible to switch on types.
-
 8. Looping (`The For statement`)
   - There is only one keyword for looping. However it can be manipulated in countless
     ways to suite the same style in other programming languages.
@@ -109,3 +108,44 @@ Some useful information when dealing with Go
     4. Check for Existence
   - References
     1. https://golang.org/doc/effective_go.html#maps
+
+10. Slices
+  - These are similar to datatypes such as lists in other languages and lend
+    themselves the benefits of such datatypes.
+  - `What is an array?`
+    This is basically a collection that has a fixed size of a particular type.
+    The array is stored in a sequential memory location.
+    In go, the syntax for creating an array may look like this: `var n[3]int`
+    `Properties`
+    1. They are fixed sized
+    2. Array type is size and underlying type. An array of 3 ints is different from
+       an array of 5 ints.
+    3. No initialisation required (0 valued). All values are zeroed out.
+    4. It is not a pointer. It is a value type. This means if you pass an Array
+       to a function, that function will get a copy of the array and will actually
+       be modifying the copy and not the actual type as opposed to a reference type
+       like a map.
+  - `What is a slice?`
+    It is an abstraction over an array. The problem with an array is that it is a
+    fixed size and the different arrays of different sizes are different types.
+    This becomes more of a problem because if you wanted to use an array as a
+    parameter to function then size would limit the number of arrays that you would
+    be able to pass in there.
+    Slices of different sizes are still the same type. This is were the slices will
+    beat the Arrays.
+    `Basic syntax for a slice: var aSlice []type = make([]type, length, capacity)`
+    - A slice is actually a pointer to an array.
+    - When working with a slice you will be taking a portion of that array and working
+      with it.
+    `Properties of a slice`
+    1. A slice is of a fixed size but we can use append to make it grow and add more
+       to it.
+    2. Type is slice of the underlying type and it does not have a length. In short, if
+       you pass it as a parameter to a function you only need to specify the type and
+       not the length as you would an array.
+    3. A slice must be initialised using `make` otherwise it will be nil. If one does not
+       use make to to initialise, then the slice will be nil.
+    4. A slice points to an array. A slice is actually a reference type unlike an array which
+       is a value type. If you pass a slice to function and you modify that slice from with in
+       the function, it is going to modify the original array pointed to by the slice.
+       Modifying the slice of a slice will affect the original as well.
