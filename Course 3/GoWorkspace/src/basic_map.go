@@ -9,6 +9,7 @@ func main() {
 	slice := []greeting.Salutation{
 		{"Roger", "Hi"},
 		{"Joe", "Hello"},
+		{"Mary", "Hi there"},
 	}
 	greeting.Greet(slice, greeting.MakePrinter("!!!!!"), true, 10)
 }

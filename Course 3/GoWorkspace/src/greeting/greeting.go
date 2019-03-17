@@ -37,7 +37,11 @@ func GetPrefix(name string) (prefix string) {
 	// Delete syntax is delete(collection, key)
 	delete(prefixMap, "Mary")
 
-	return prefixMap[name]
+	if value, exists := prefixMap[name]; exists {
+		return value
+	}
+
+	return "Dude "
 }
 
 // CreateMessage returns named values
