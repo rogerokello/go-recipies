@@ -24,6 +24,9 @@ func Greet(salutation []Salutation, do Printer, isFormal bool, times int) {
 }
 
 func GetPrefix(name string) (prefix string) {
+	var prefixMap map[string]string
+	prefixMap = make(map[string]string)
+
 	switch { // without name here it evaluates to true so comparisons are made on the inside for all values
 	case name == "Roger": // All the cases have to evaluate to boolean
 		prefix = "Mr. "
