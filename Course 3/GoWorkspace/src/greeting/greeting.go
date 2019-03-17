@@ -27,20 +27,12 @@ func GetPrefix(name string) (prefix string) {
 	var prefixMap map[string]string
 	prefixMap = make(map[string]string)
 
-	switch { // without name here it evaluates to true so comparisons are made on the inside for all values
-	case name == "Roger": // All the cases have to evaluate to boolean
-		prefix = "Mr. "
-	case name == "Joe", name == "Jenny", len(name) == 10:
-		// These are evaluated on an or basis.
-		// Either name is joe or it Jenny or it's length is 10
-		prefix = "Dr. "
-	case name == "Mary":
-		prefix = "Mrs. "
-	default:
-		prefix = "Dude "
-	}
+	prefixMap["Roger"] = "Mr. "
+	prefixMap["Joe"] = "Dr. "
+	prefixMap["Jenny"] = "Dr. "
+	prefixMap["Mary"] = "Mrs. "
 
-	return
+	return prefixMap[name]
 }
 
 // CreateMessage returns named values
