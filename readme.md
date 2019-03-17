@@ -89,6 +89,7 @@ Some useful information when dealing with Go
     }
     ```
 9. Maps
+
   - Analogous to Dictionaries in python. They have unique keys that map to values
   - Keys in maps need to have equality operators defined for them. This means if
     you want to use a type for a key in your map, it has to be one that allows
@@ -102,7 +103,9 @@ Some useful information when dealing with Go
   - Maps are not thread safe. Do not use maps in concurrent code unless you
     absolutely have to.
   `Map operations`
-  1. Insert
-  2. Update
-  3. Delete
-  4. Check for Existence
+    1. Insert
+    2. Update
+    3. Delete
+    4. Check for Existence
+  - References
+    1. https://golang.org/doc/effective_go.html#maps
