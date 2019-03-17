@@ -88,3 +88,16 @@ Some useful information when dealing with Go
       continue // to stop execution at that point and continue the next iteration
     }
     ```
+9. Maps
+  - Analogous to Dictionaries in python. They have unique keys that map to values
+  - Keys in maps need to have equality operators defined for them. This means if
+    you want to use a type for a key in your map, it has to be one that allows
+    for equal comparisons. Most built in types (strings, ints, floats) support the
+    equality operator. This is important because certain types like a slice do not
+    have an equality operator defined for them.
+  - Maps are reference types. This means that if you have a map variable it behaves
+    very much like a pointer. When you pass a map to function, any changes made to
+    the map within the function will propagate to the original value because the
+    actual reference is passed in an not a copy.
+  - Maps are not thread safe. Do not use maps in concurrent code unless you
+    absolutely have to.
