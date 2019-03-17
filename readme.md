@@ -153,4 +153,5 @@ Some useful information when dealing with Go
        In case the slice was made with lower capacity a new underlying array is created and
        all the previous items copied to it together with the new item to be added. This is
        normally an expensive operation and setting a slice using make with a larger capacity
-       is preferred. Basic syntax of append is `newSlice = append(slice, itemToAddToSlice)`
+       is preferred. Basic syntax of append is `newSlice = append(slice, itemToAddToSlice)`.
+       `append` takes a variable number of arguments of the type of slice.
