@@ -149,3 +149,8 @@ Some useful information when dealing with Go
        is a value type. If you pass a slice to function and you modify that slice from with in
        the function, it is going to modify the original array pointed to by the slice.
        Modifying the slice of a slice will affect the original as well.
+    5. Because slices are arrays underneath, we use the `append` to add items to the slice.
+       In case the slice was made with lower capacity a new underlying array is created and
+       all the previous items copied to it together with the new item to be added. This is
+       normally an expensive operation and setting a slice using make with a larger capacity
+       is preferred. Basic syntax of append is `newSlice = append(slice, itemToAddToSlice)`
