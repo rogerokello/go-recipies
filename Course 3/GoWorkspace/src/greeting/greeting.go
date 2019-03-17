@@ -34,6 +34,9 @@ func GetPrefix(name string) (prefix string) {
 
 	prefixMap["Joe"] = "Jr. "
 
+	// Delete syntax is delete(collection, key)
+	delete(prefixMap, "Mary")
+
 	return prefixMap[name]
 }
 
