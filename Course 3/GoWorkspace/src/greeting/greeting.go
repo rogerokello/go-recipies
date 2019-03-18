@@ -18,6 +18,14 @@ func (salutation *Salutation) Rename(newName string) {
 	salutation.Name = newName
 }
 
+func (salutation *Salutation) Write(p []byte) (n int, err error) {
+	s := string(p)
+	salutation.Rename(s)
+	n = len(s)
+	err = nil
+	return
+}
+
 // Printer is a type which a function that takes in a string and returns nothing
 type Printer func(string) // or type Printer func(string)()
 
