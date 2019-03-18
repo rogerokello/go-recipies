@@ -187,3 +187,9 @@ Some useful information when dealing with Go
     It is possible for a function to take an interface as a parameter and then use that interface and know that those Methods
     that exist on that interface exist and then utilise it through that interface. This gives one the flexibility of passing
     in several types into that function and using them via that interface.
+
+    `Empty Interface`
+    If we define an interface that has no requirements then every single type in the system will implement that interface.
+    ```
+    interface {}
+    ```
