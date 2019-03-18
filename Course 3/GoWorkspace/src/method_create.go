@@ -4,12 +4,11 @@ import "./greeting"
 
 func main() {
 
-	//var s = greeting.Salutation{"1234567890", ""}
-
-	slice := []greeting.Salutation{
+	salutations := greeting.Salutations{
 		{"Roger", "Hi"},
 		{"Joe", "Hello"},
 		{"Mary", "Hi there"},
 	}
-	greeting.Greet(slice, greeting.MakePrinter("!!!!!"), true, 10)
+
+	salutations.Greet(greeting.MakePrinter("!!!!!"), true, 10)
 }
