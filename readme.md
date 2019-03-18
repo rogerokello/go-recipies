@@ -193,3 +193,6 @@ Some useful information when dealing with Go
     ```
     interface {}
     ```
+    - References
+      1. https://golang.org/doc/effective_go.html#methods
+      2. https://golang.org/doc/effective_go.html#interfaces
