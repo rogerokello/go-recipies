@@ -196,3 +196,12 @@ Some useful information when dealing with Go
     - References
       1. https://golang.org/doc/effective_go.html#methods
       2. https://golang.org/doc/effective_go.html#interfaces
+
+13. Channels
+    `Note:` Do not communicate by sharing data but instead share data by communicating.
+    1. Goroutines
+      - It is basically a light weight thread and it is managed by the go runtime.
+      - It uses the keyword `go` placed in front of a function. When placed in front of a function, it is basically saying
+        run this and keep on going. I do not want to block waiting for this to finish. We do not have to worry that this is
+        another thread or how this thread is being created or the life cycle of this thread. Instead it is the go runtime
+        that will manage all that.
