@@ -25,6 +25,11 @@ func (salutations Salutations) Greet(do Printer, isFormal bool, times int) {
 	}
 }
 
+func (salutations Salutations) Add(salutation Salutation) Salutations {
+	s := append(salutations, salutation)
+	return s
+}
+
 func GetPrefix(name string) (prefix string) {
 	// Use this form if you already know what is going to be in the map before hand
 	prefixMap := map[string]string{

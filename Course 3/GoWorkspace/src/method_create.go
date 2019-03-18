@@ -10,5 +10,7 @@ func main() {
 		{"Mary", "Hi there"},
 	}
 
+	salutations = salutations.Add(greeting.Salutation{"James", "Oh hi"})
+
 	salutations.Greet(greeting.MakePrinter("!!!!!"), true, 10)
 }
