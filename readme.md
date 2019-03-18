@@ -156,9 +156,24 @@ Some useful information when dealing with Go
        is preferred. Basic syntax of append is `newSlice = append(slice, itemToAddToSlice)`.
        `append` takes a variable number of arguments of the type of slice.
 
-10. Methods
+10. Go Methods
     Define methods by defining a function which specifies which types it operates on. It will behave just
     like a normal function with parameters and return values. Go methods can operate on any named types.
     It will operate on any named type in the same package as it was declared.
     `NB`: A classical example could be you could rename an integer type to myInt and then define a method
     on it. What this just means is that we can create a method for any type so long as we name that type first
+
+11. Pointer methods
+    If we create a method on a named type we cannot modify that named type, but if we create a method on a Pointer
+    to a named type we can modify the named type. Think of a method in go as taking one additional parameter, which
+    is a type.
+    `Basic rule`: If you declare a method that is going to work on a pointer to a named type, then it is more specific,
+    it is only going to work if you pass in a pointer to that named type.
+    ```
+      func(*myType)myMethod(i int)
+    ```
+    But if you declare a method that is going to work on a named type, then you can utilise than method from that named type
+    itself or a pointer to that named type.
+    ```
+      func(myType)myMethod(i int)
+    ```
