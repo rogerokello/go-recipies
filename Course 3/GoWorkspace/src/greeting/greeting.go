@@ -8,6 +8,10 @@ type Salutation struct {
 	Greeting string
 }
 
+type Renamable interface {
+	Rename(newName string)
+}
+
 // This is a pointer reciever method and will modify the underlying value
 // passed to it.
 func (salutation *Salutation) Rename(newName string) {
