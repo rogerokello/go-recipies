@@ -8,6 +8,12 @@ type Salutation struct {
 	Greeting string
 }
 
+// This is a pointer reciever method and will modify the underlying value
+// passed to it.
+func (salutation *Salutation) Rename(newName string) {
+	salutation.Name = newName
+}
+
 // Printer is a type which a function that takes in a string and returns nothing
 type Printer func(string) // or type Printer func(string)()
 
