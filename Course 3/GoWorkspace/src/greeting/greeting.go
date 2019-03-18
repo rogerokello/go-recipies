@@ -13,9 +13,9 @@ type Printer func(string) // or type Printer func(string)()
 
 type Salutations []Salutation
 
-// Greet takes in a function as a parameter
-func Greet(salutation Salutations, do Printer, isFormal bool, times int) {
-	for _, s := range salutation {
+// This is a method on the type Salutations
+func (salutations Salutations) Greet(do Printer, isFormal bool, times int) {
+	for _, s := range salutations {
 		message, alternate := CreateMessage(s.Name, s.Greeting)
 		if prefix := GetPrefix(s.Name); isFormal {
 			do(prefix + message)
