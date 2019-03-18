@@ -177,3 +177,13 @@ Some useful information when dealing with Go
     ```
       func(myType)myMethod(i int)
     ```
+
+12. Interfaces
+    It just simple states that what does something do. If something obeys this contract/interface then it belongs to that
+    interface type. In go we do not have to explicitly implement interfaces.
+    `NB` Any type that has the same methods as an interface implements that interface.
+    In order to implement an interface in Go all that has to happen is a named type has to implement the methods defined
+    by the interface. This means one can use that type any where the interface is specified.
+    It is possible for a function to take an interface as a parameter and then use that interface and know that those Methods
+    that exist on that interface exist and then utilise it through that interface. This gives one the flexibility of passing
+    in several types into that function and using them via that interface.
