@@ -155,3 +155,10 @@ Some useful information when dealing with Go
        normally an expensive operation and setting a slice using make with a larger capacity
        is preferred. Basic syntax of append is `newSlice = append(slice, itemToAddToSlice)`.
        `append` takes a variable number of arguments of the type of slice.
+
+10. Methods
+    Define methods by defining a function which specifies which types it operates on. It will behave just
+    like a normal function with parameters and return values. Go methods can operate on any named types.
+    It will operate on any named type in the same package as it was declared.
+    `NB`: A classical example could be you could rename an integer type to myInt and then define a method
+    on it. What this just means is that we can create a method for any type so long as we name that type first
