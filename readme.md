@@ -207,3 +207,18 @@ Some useful information when dealing with Go
         that will manage all that.
       - You if you create a go routine in main, you have to be careful enough to make sure it gets completed before
         the main exists. ie. main may have to wait for it to complete.
+
+    2. Channels
+      - Because one has to synchronise how goroutines get run and ensure main does not complete before the go routines,
+        go uses channels to synchronise this communication between goroutines. Actually main is also a go routine.
+      - Essentially what happens is one go routine (goroutine 1) feeds a channel with something and another go routine
+        (goroutine 2) waits to extract something out of that channel.
+      `Channel types`
+      1. Un Buffered
+         This means before something new is put onto the channel, we have to wait for whatever was present to be removed
+         fro the channel. In short the channel can only be used once at a time. If we have to read from the channel,
+         we have to wait until data is actually in the channel.
+      2. Buffered
+         This is going to allow for how many items have to be in the channel before we actually block on the channel.
+
+      NB: A channel is actually used to communicate between threads.
