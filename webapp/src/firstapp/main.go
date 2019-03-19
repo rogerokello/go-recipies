@@ -20,11 +20,11 @@ func main() {
 		// The response sent must be a slice of bytes
 		// []byte("String")-This converts a string to a slice of bytes
 		w.Write([]byte("Hello Go!"))
-
-		// This is how a server is set up
-		// When you pass nil as the second parameter, it is going to use the default
-		// mux server. It just means it is going to give us a default instance
-		// of a web server.
-		http.ListenAndServe(":800 0", nil)
 	})
+
+	// This is how a server is set up
+	// When you pass nil as the second parameter, it is going to use the default
+	// mux server. It just means it is going to give us a default instance
+	// of a web server.
+	http.ListenAndServe(":8000", nil)
 }
