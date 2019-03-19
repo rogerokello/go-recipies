@@ -36,10 +36,12 @@ func main() {
 
 	go func() {
 		salutations.Greet(greeting.MakePrinter(" --Goroutine-- "), true, 10)
+		// write to go channel an item. In this case true
 		done <- true
 	}()
 
 	salutations.Greet(greeting.MakePrinter("!!!!!"), true, 10)
 
+	// Read from the done channel
 	<-done
 }
