@@ -43,6 +43,13 @@ func (salutations Salutations) Greet(do Printer, isFormal bool, times int) {
 	}
 }
 
+func (salutations Salutations) ChannelGreeter(c chan Salutation) {
+	for _, value := range salutations {
+		c <- value
+	}
+	close(c)
+}
+
 func (salutations Salutations) Add(salutation Salutation) Salutations {
 	s := append(salutations, salutation)
 	return s
