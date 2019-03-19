@@ -228,3 +228,10 @@ Some useful information when dealing with Go
           It appears when one adds more items to a buffer than its size, it blocks until all items are read.
 
       NB: A channel is actually used to communicate between threads.
+
+    3. Select statement
+      - Like a switch but on communications
+      - Rules
+          - Execute a case that is ready
+          - If more than one is "ready" execute one at random
+          - If none are "ready", block unless default is defined 
