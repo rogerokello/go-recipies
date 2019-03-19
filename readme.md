@@ -220,5 +220,11 @@ Some useful information when dealing with Go
          we have to wait until data is actually in the channel.
       2. Buffered
          This is going to allow for how many items have to be in the channel before we actually block on the channel.
+      NB: The buffer specifies how many times you have to write to a channel before that data starts being read from that
+          channel. In some cases data is read from a buffered channel as long as something has now come through. For example
+          If a channel has a buffer size of 2 and one item has already been sent to it but other lines of code continue to
+          execute before other items are sent to channel, then it means an item can be read off from the channel before
+          another item is place to it.
+          It appears when one adds more items to a buffer than its size, it blocks until all items are read.
 
       NB: A channel is actually used to communicate between threads.
